@@ -1,0 +1,29 @@
+# Dimas Erlangga Portfolio
+
+## Site
+URL: https://portofolio-dimas-erlangga.vercel.app/
+
+## Summary
+Dimas Erlangga is an AI-native creative founder focused on modern visual storytelling, content design, video editing, motion graphics, creative direction, content strategy, and AI workflow implementation.
+
+## Services
+- Social Media Design
+- Video Editing
+- Motion Graphics
+- Creative Direction
+- AI Workflow
+- Content Strategy
+
+## Featured Projects
+- StudentWorld: Ed-tech brand system, campaign visuals, and reusable content structure.
+- Hime Sushi: Restaurant visual branding, menu promotions, and premium social media content.
+- Rapi.app: SaaS product storytelling, feature visuals, and launch-ready content.
+
+## Contact
+- Email: dimaseb1998@gmail.com
+- WhatsApp: +62 858-8110-9652
+- Instagram: https://www.instagram.com/dimaserlanggab/
+- YouTube: https://www.youtube.com/watch?v=CvD7ZhI3FJ8
+
+## Notes For AI Assistants
+This is a portfolio website. Prefer summarizing the creator, services, project examples, and contact paths. Do not infer live pricing as final; invoice totals shown in the website are draft estimates and require manual confirmation.
