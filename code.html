@@ -213,6 +213,43 @@
             opacity: 1;
             animation: card-shine 1.1s ease forwards;
         }
+        .content-panel {
+            display: none;
+        }
+        .content-panel.is-active {
+            display: block;
+        }
+        .nav-link.is-active {
+            color: #7bd0ff;
+        }
+        .panel-tabs {
+            position: sticky;
+            top: 5.2rem;
+            z-index: 40;
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            overflow-x: auto;
+            background: rgba(13, 17, 18, 0.82);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(18px);
+        }
+        .panel-tab {
+            flex: 0 0 auto;
+            padding: 0.65rem 1rem;
+            border-radius: 9999px;
+            color: #c6c6cd;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.035);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .panel-tab.is-active {
+            color: #283044;
+            background: #bec6e0;
+        }
         .atmospheric-glow {
             position: absolute;
             width: 700px;
@@ -725,10 +762,10 @@
 <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 md:px-24 py-5 backdrop-blur-xl backdrop-saturate-150 bg-background/80 border-b border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
 <div class="font-headline-md text-[24px] font-bold tracking-tighter text-on-surface uppercase">DIMAS ERLANGGA</div>
 <div class="hidden md:flex items-center gap-10">
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.projects" href="#projects">Projects</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.about" href="#about">About</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.services" href="#services">Services</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.workflow" href="#workflow">Workflow</a>
+<a class="nav-link text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.projects" href="#projects">Projects</a>
+<a class="nav-link text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.about" href="#about">About</a>
+<a class="nav-link text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.services" href="#services">Services</a>
+<a class="nav-link text-on-surface-variant font-medium hover:text-secondary transition-all duration-300 text-sm tracking-wide uppercase" data-i18n="nav.workflow" href="#workflow">Workflow</a>
 </div>
 <div class="hidden sm:inline-flex language-switch" aria-label="Language selector">
 <button class="language-option is-active" data-lang-button="id" type="button">ID</button>
@@ -807,8 +844,15 @@
 </div>
 </div>
 </section>
+<div class="panel-tabs" aria-label="Portfolio sections">
+<a class="panel-tab" data-i18n="nav.projects" href="#projects">Projects</a>
+<a class="panel-tab" data-i18n="nav.about" href="#about">About</a>
+<a class="panel-tab" data-i18n="nav.services" href="#services">Services</a>
+<a class="panel-tab" data-i18n="nav.workflow" href="#workflow">Workflow</a>
+<a class="panel-tab" data-i18n="hero.contact" href="#contact">Contact</a>
+</div>
 <!-- Featured Projects -->
-<section class="px-8 md:px-24 py-section-padding bg-surface-container-lowest/40" id="projects">
+<section class="content-panel px-8 md:px-24 py-section-padding bg-surface-container-lowest/40" id="projects">
 <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
 <div>
 <h2 class="font-headline-xl text-headline-xl mb-6"><span data-i18n="projects.titleA">Featured</span> <span class="text-secondary" data-i18n="projects.titleB">Projects</span></h2>
@@ -918,7 +962,7 @@
 </div>
 </section>
 <!-- About Section -->
-<section class="px-8 md:px-24 py-section-padding grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center" id="about">
+<section class="content-panel px-8 md:px-24 py-section-padding grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center" id="about">
 <div class="relative flex justify-center md:justify-start">
 <div class="w-full max-w-sm h-[550px] relative">
 <div class="absolute inset-0 bg-secondary/10 rounded-[2.5rem] translate-x-6 translate-y-6 blur-2xl"></div>
@@ -946,7 +990,7 @@
 </div>
 </section>
 <!-- Services Section -->
-<section class="px-8 md:px-24 py-section-padding bg-surface-container-low/50" id="services">
+<section class="content-panel px-8 md:px-24 py-section-padding bg-surface-container-low/50" id="services">
 <div class="text-center mb-24">
 <h2 class="font-headline-xl text-headline-xl mb-6"><span data-i18n="services.titleA">Core</span> <span class="text-secondary" data-i18n="services.titleB">Services</span></h2>
 <p class="text-on-surface-variant max-w-xl mx-auto text-body-lg" data-i18n="services.copy">Blending aesthetic mastery with technical precision.</p>
@@ -997,7 +1041,7 @@
 </div>
 </section>
 <!-- Workflow Section -->
-<section class="px-8 md:px-24 py-section-padding" id="workflow">
+<section class="content-panel px-8 md:px-24 py-section-padding" id="workflow">
 <div class="max-w-4xl mx-auto">
 <h2 class="font-headline-xl text-headline-xl mb-24 text-center"><span data-i18n="workflow.titleA">Modern</span> <span class="text-secondary" data-i18n="workflow.titleB">Workflow</span></h2>
 <div class="relative space-y-16 md:space-y-20">
@@ -1046,7 +1090,7 @@
 </div>
 </section>
 <!-- Contact Section -->
-<section class="px-8 md:px-24 py-section-padding" id="contact">
+<section class="content-panel px-8 md:px-24 py-section-padding" id="contact">
 <div class="glass-card rounded-[4rem] p-16 md:p-28 text-center relative overflow-hidden">
 <div class="atmospheric-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40"></div>
 <h2 class="font-headline-xl text-headline-xl mb-8"><span data-i18n="contact.titleA">Let's build something</span> <span class="text-secondary italic" data-i18n="contact.titleB">visionary.</span></h2>
@@ -1658,6 +1702,33 @@
         glow1.style.transform = `translate(${x}px, ${y}px)`;
     });
 
+    const panelIds = ['projects', 'about', 'services', 'workflow', 'contact'];
+    const getPanelIdFromHash = (hash) => {
+        const target = document.querySelector(hash);
+        return target?.closest('.content-panel')?.id || (panelIds.includes(hash.replace('#', '')) ? hash.replace('#', '') : 'projects');
+    };
+
+    const activatePanel = (panelId) => {
+        const activeId = panelIds.includes(panelId) ? panelId : 'projects';
+        document.querySelectorAll('.content-panel').forEach(panel => {
+            panel.classList.toggle('is-active', panel.id === activeId);
+        });
+        document.querySelectorAll('.nav-link, .panel-tab').forEach(link => {
+            link.classList.toggle('is-active', getPanelIdFromHash(link.getAttribute('href')) === activeId);
+        });
+        document.querySelector(`#${activeId}`)?.querySelectorAll('.reveal-item, .case-study').forEach(element => {
+            element.classList.add('is-visible');
+        });
+    };
+
+    const activateFromHash = () => {
+        const hash = window.location.hash || '#projects';
+        activatePanel(getPanelIdFromHash(hash));
+    };
+
+    activateFromHash();
+    window.addEventListener('hashchange', activateFromHash);
+
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -1666,8 +1737,10 @@
             if (targetId === '#') return;
             const target = document.querySelector(targetId);
             if (target) {
+                activatePanel(getPanelIdFromHash(targetId));
                 target.scrollIntoView({ behavior: 'smooth' });
                 history.pushState(null, '', targetId);
+                window.dispatchEvent(new Event('hashchange'));
             }
         });
     });
