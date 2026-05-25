@@ -747,7 +747,6 @@
         }
         .conversion-step,
         .trust-card,
-        .pricing-anchor,
         .lead-magnet {
             border: 1px solid rgba(255, 255, 255, 0.08);
             background: rgba(255, 255, 255, 0.04);
@@ -768,7 +767,6 @@
         }
         .conversion-step p,
         .trust-card p,
-        .pricing-anchor p,
         .lead-magnet p {
             color: #c6c6cd;
             line-height: 1.55;
@@ -787,31 +785,6 @@
         }
         .trust-card {
             padding: 1.15rem;
-        }
-        .pricing-anchor-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        @media (min-width: 768px) {
-            .pricing-anchor-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
-        .pricing-anchor {
-            padding: 1.25rem;
-        }
-        .pricing-anchor strong {
-            display: block;
-            color: #e0e3e5;
-            font-size: 1rem;
-        }
-        .pricing-anchor b {
-            display: block;
-            color: #7bd0ff;
-            margin: 0.5rem 0;
-            font-size: 1.35rem;
         }
         .lead-magnet {
             display: flex;
@@ -1292,7 +1265,7 @@
 <article class="package-card">
 <span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.social.kicker">Starter</span>
 <h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.social.title">7-Day Social Visual Kit</h4>
-<p class="package-price">Rp2.5M+</p>
+<p class="package-price" data-i18n="packages.social.price">Rp2.5M+ / $160+</p>
 <div class="package-list">
 <p data-i18n="packages.social.item1">9 social media visuals</p>
 <p data-i18n="packages.social.item2">Content direction and visual style</p>
@@ -1303,7 +1276,7 @@
 <article class="package-card featured">
 <span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.launch.kicker">Most useful</span>
 <h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.launch.title">Launch Content Pack</h4>
-<p class="package-price">Rp5.5M+</p>
+<p class="package-price" data-i18n="packages.launch.price">Rp5.5M+ / $350+</p>
 <div class="package-list">
 <p data-i18n="packages.launch.item1">Campaign concept and visual direction</p>
 <p data-i18n="packages.launch.item2">Static posts, reels cover, and story assets</p>
@@ -1314,30 +1287,13 @@
 <article class="package-card">
 <span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.ai.kicker">Scale</span>
 <h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.ai.title">AI Creative Workflow Setup</h4>
-<p class="package-price">Rp6.5M+</p>
+<p class="package-price" data-i18n="packages.ai.price">Rp6.5M+ / $420+</p>
 <div class="package-list">
 <p data-i18n="packages.ai.item1">AI-assisted content production workflow</p>
 <p data-i18n="packages.ai.item2">Prompt system and asset pipeline</p>
 <p data-i18n="packages.ai.item3">Training notes for repeatable execution</p>
 </div>
 <a class="card-cta" href="#contact" data-package-contact="AI Creative Workflow Setup"><span data-i18n="packages.cta">Start this package</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
-</article>
-</div>
-<div class="pricing-anchor-grid">
-<article class="pricing-anchor">
-<strong data-i18n="pricing.social.title">Social Visual Kit</strong>
-<b data-i18n="pricing.social.price">From Rp2.5M / $160</b>
-<p data-i18n="pricing.social.copy">Best for brands that need a cleaner, more consistent feed quickly.</p>
-</article>
-<article class="pricing-anchor">
-<strong data-i18n="pricing.launch.title">Launch Pack</strong>
-<b data-i18n="pricing.launch.price">From Rp5.5M / $350</b>
-<p data-i18n="pricing.launch.copy">Best for campaigns, offers, product drops, and new service launches.</p>
-</article>
-<article class="pricing-anchor">
-<strong data-i18n="pricing.ai.title">AI Workflow</strong>
-<b data-i18n="pricing.ai.price">From Rp6.5M / $420</b>
-<p data-i18n="pricing.ai.copy">Best for teams that want repeatable content production with AI support.</p>
 </article>
 </div>
 </div>
@@ -1675,29 +1631,23 @@
             "packages.copy": "Paket jelas, scope jelas, dan estimasi jelas. Cocok untuk brand yang ingin bergerak cepat tanpa meeting berputar-putar.",
             "packages.social.kicker": "Starter",
             "packages.social.title": "7-Day Social Visual Kit",
+            "packages.social.price": "Rp2,5Jt+ / $160+",
             "packages.social.item1": "9 visual media sosial siap posting",
             "packages.social.item2": "Arah konten dan gaya visual yang konsisten",
             "packages.social.item3": "Ide caption dan prompt konten untuk produksi lanjutan",
             "packages.launch.kicker": "Paling berguna",
             "packages.launch.title": "Launch Content Pack",
+            "packages.launch.price": "Rp5,5Jt+ / $350+",
             "packages.launch.item1": "Konsep campaign dan pesan utama",
             "packages.launch.item2": "Static posts, reels cover, dan story assets siap launch",
             "packages.launch.item3": "Delivery rapi dalam 7-14 hari sesuai scope",
             "packages.ai.kicker": "Scale",
             "packages.ai.title": "AI Creative Workflow Setup",
+            "packages.ai.price": "Rp6,5Jt+ / $420+",
             "packages.ai.item1": "Workflow produksi konten berbantuan AI",
             "packages.ai.item2": "Prompt system dan asset pipeline yang bisa dipakai ulang",
             "packages.ai.item3": "Training notes agar tim bisa eksekusi lebih mandiri",
             "packages.cta": "Minta estimasi",
-            "pricing.social.title": "Social Visual Kit",
-            "pricing.social.price": "Mulai Rp2,5Jt / $160",
-            "pricing.social.copy": "Cocok untuk brand yang butuh feed lebih rapi dan konsisten dengan cepat.",
-            "pricing.launch.title": "Launch Pack",
-            "pricing.launch.price": "Mulai Rp5,5Jt / $350",
-            "pricing.launch.copy": "Cocok untuk campaign, offer, product drop, dan launch layanan baru.",
-            "pricing.ai.title": "AI Workflow",
-            "pricing.ai.price": "Mulai Rp6,5Jt / $420",
-            "pricing.ai.copy": "Cocok untuk tim yang ingin produksi konten berulang dengan bantuan AI.",
             "lead.kicker": "Masih belum yakin?",
             "lead.title": "Kirim ide mentahnya dulu.",
             "lead.copy": "Brief tidak harus sempurna. Ceritakan goal kasarnya, nanti aku bantu jadikan scope, timeline, dan estimasi yang jelas.",
@@ -1832,29 +1782,23 @@
             "packages.copy": "Clear packages, clear scope, clear estimates. Built for brands that want momentum without endless meetings.",
             "packages.social.kicker": "Starter",
             "packages.social.title": "7-Day Social Visual Kit",
+            "packages.social.price": "Rp2.5M+ / $160+",
             "packages.social.item1": "9 ready-to-post social media visuals",
             "packages.social.item2": "Consistent content direction and visual style",
             "packages.social.item3": "Caption and content prompt ideas for future production",
             "packages.launch.kicker": "Most useful",
             "packages.launch.title": "Launch Content Pack",
+            "packages.launch.price": "Rp5.5M+ / $350+",
             "packages.launch.item1": "Campaign concept and core message",
             "packages.launch.item2": "Static posts, reels cover, and story assets ready to launch",
             "packages.launch.item3": "Clean delivery within 7-14 days based on scope",
             "packages.ai.kicker": "Scale",
             "packages.ai.title": "AI Creative Workflow Setup",
+            "packages.ai.price": "Rp6.5M+ / $420+",
             "packages.ai.item1": "AI-assisted content production workflow",
             "packages.ai.item2": "Reusable prompt system and asset pipeline",
             "packages.ai.item3": "Training notes so your team can execute with more independence",
             "packages.cta": "Get estimate",
-            "pricing.social.title": "Social Visual Kit",
-            "pricing.social.price": "From Rp2.5M / $160",
-            "pricing.social.copy": "Best for brands that need a cleaner, more consistent feed quickly.",
-            "pricing.launch.title": "Launch Pack",
-            "pricing.launch.price": "From Rp5.5M / $350",
-            "pricing.launch.copy": "Best for campaigns, offers, product drops, and new service launches.",
-            "pricing.ai.title": "AI Workflow",
-            "pricing.ai.price": "From Rp6.5M / $420",
-            "pricing.ai.copy": "Best for teams that want repeatable content production with AI support.",
             "lead.kicker": "Not sure yet?",
             "lead.title": "Send the messy idea first.",
             "lead.copy": "No need for a perfect brief. Share the rough goal, I'll help turn it into a clear scope, timeline, and estimate.",
