@@ -733,6 +733,107 @@
             color: #c6c6cd;
             line-height: 1.55;
         }
+        .conversion-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
+            margin: -3rem auto 4rem;
+            max-width: 72rem;
+        }
+        @media (min-width: 768px) {
+            .conversion-strip {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        .conversion-step,
+        .trust-card,
+        .pricing-anchor,
+        .lead-magnet {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 1.5rem;
+        }
+        .conversion-step {
+            padding: 1.1rem;
+        }
+        .conversion-step span,
+        .trust-card span {
+            color: #7bd0ff;
+        }
+        .conversion-step strong,
+        .trust-card strong {
+            display: block;
+            color: #e0e3e5;
+            margin: 0.4rem 0 0.3rem;
+        }
+        .conversion-step p,
+        .trust-card p,
+        .pricing-anchor p,
+        .lead-magnet p {
+            color: #c6c6cd;
+            line-height: 1.55;
+            font-size: 14px;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 4rem 0 0;
+        }
+        @media (min-width: 768px) {
+            .trust-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+        }
+        .trust-card {
+            padding: 1.15rem;
+        }
+        .pricing-anchor-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .pricing-anchor-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        .pricing-anchor {
+            padding: 1.25rem;
+        }
+        .pricing-anchor strong {
+            display: block;
+            color: #e0e3e5;
+            font-size: 1rem;
+        }
+        .pricing-anchor b {
+            display: block;
+            color: #7bd0ff;
+            margin: 0.5rem 0;
+            font-size: 1.35rem;
+        }
+        .lead-magnet {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding: 1.35rem;
+            text-align: left;
+            border-color: rgba(123, 208, 255, 0.2);
+            background: linear-gradient(135deg, rgba(123, 208, 255, 0.08), rgba(255, 255, 255, 0.035));
+        }
+        .lead-magnet .card-cta {
+            margin-top: 0;
+        }
+        @media (min-width: 768px) {
+            .lead-magnet {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
         .faq-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -760,6 +861,19 @@
             line-height: 1.6;
         }
         @media (max-width: 767px) {
+            .min-h-screen {
+                min-height: 84vh;
+            }
+            .py-section-padding {
+                padding-top: 4.5rem;
+                padding-bottom: 4.5rem;
+            }
+            .pt-40 {
+                padding-top: 7.5rem;
+            }
+            .pb-section-padding {
+                padding-bottom: 4.5rem;
+            }
             nav {
                 gap: 0.75rem;
             }
@@ -778,6 +892,26 @@
             }
             .font-body-lg.text-body-lg {
                 font-size: 16px;
+            }
+            .glass-card.p-12 {
+                padding: 1.5rem;
+                border-radius: 1.5rem;
+            }
+            .text-center.mb-24,
+            .mb-24 {
+                margin-bottom: 3rem;
+            }
+            .mt-24 {
+                margin-top: 4rem;
+            }
+            .package-card,
+            .brief-card {
+                padding: 1.35rem;
+                border-radius: 1.5rem;
+            }
+            .social-preview-grid,
+            .faq-grid {
+                margin-top: 1.5rem;
             }
             .social-preview-card {
                 align-items: flex-start;
@@ -1055,6 +1189,28 @@
 <h2 class="font-headline-xl text-headline-xl mb-6"><span data-i18n="services.titleA">Core</span> <span class="text-secondary" data-i18n="services.titleB">Services</span></h2>
 <p class="text-on-surface-variant max-w-xl mx-auto text-body-lg" data-i18n="services.copy">Blending aesthetic mastery with technical precision.</p>
 </div>
+<div class="conversion-strip">
+<article class="conversion-step">
+<span class="font-label-caps text-[10px] tracking-[0.16em] uppercase">01</span>
+<strong data-i18n="path.look.title">See the work</strong>
+<p data-i18n="path.look.copy">Pick a project or service that feels closest to your goal.</p>
+</article>
+<article class="conversion-step">
+<span class="font-label-caps text-[10px] tracking-[0.16em] uppercase">02</span>
+<strong data-i18n="path.pick.title">Choose a direction</strong>
+<p data-i18n="path.pick.copy">Start from a package or request a custom scope.</p>
+</article>
+<article class="conversion-step">
+<span class="font-label-caps text-[10px] tracking-[0.16em] uppercase">03</span>
+<strong data-i18n="path.brief.title">Send the brief</strong>
+<p data-i18n="path.brief.copy">Share the essentials and get a draft estimate fast.</p>
+</article>
+<article class="conversion-step">
+<span class="font-label-caps text-[10px] tracking-[0.16em] uppercase">04</span>
+<strong data-i18n="path.start.title">Start production</strong>
+<p data-i18n="path.start.copy">Lock scope, timeline, payment, then we create.</p>
+</article>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Social Media -->
 <a class="glass-card p-12 rounded-[2.5rem] card-link" data-service-card="Social Media Design" href="#contact">
@@ -1099,6 +1255,33 @@
 <span class="card-cta"><span data-i18n="card.askService">Ask Service</span><span class="material-symbols-outlined text-sm">arrow_forward</span></span>
 </a>
 </div>
+<div class="trust-grid">
+<article class="trust-card">
+<span class="material-symbols-outlined">task_alt</span>
+<strong data-i18n="trust.scope.title">Clear scope</strong>
+<p data-i18n="trust.scope.copy">You know what will be made, when it arrives, and what counts as done.</p>
+</article>
+<article class="trust-card">
+<span class="material-symbols-outlined">bolt</span>
+<strong data-i18n="trust.speed.title">Fast delivery</strong>
+<p data-i18n="trust.speed.copy">Lean process for social kits, launches, and urgent visual needs.</p>
+</article>
+<article class="trust-card">
+<span class="material-symbols-outlined">tune</span>
+<strong data-i18n="trust.revision.title">Revision included</strong>
+<p data-i18n="trust.revision.copy">Focused revisions keep the result polished without slowing everything down.</p>
+</article>
+<article class="trust-card">
+<span class="material-symbols-outlined">public</span>
+<strong data-i18n="trust.global.title">Global friendly</strong>
+<p data-i18n="trust.global.copy">Remote-ready communication, digital delivery, and multi-currency estimates.</p>
+</article>
+<article class="trust-card">
+<span class="material-symbols-outlined">psychology</span>
+<strong data-i18n="trust.ai.title">AI assisted</strong>
+<p data-i18n="trust.ai.copy">AI speeds up production while creative judgment keeps the work sharp.</p>
+</article>
+</div>
 <div class="mt-24">
 <div class="text-center">
 <span class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase" data-i18n="packages.kicker">Fast Offers</span>
@@ -1138,6 +1321,23 @@
 <p data-i18n="packages.ai.item3">Training notes for repeatable execution</p>
 </div>
 <a class="card-cta" href="#contact" data-package-contact="AI Creative Workflow Setup"><span data-i18n="packages.cta">Start this package</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</article>
+</div>
+<div class="pricing-anchor-grid">
+<article class="pricing-anchor">
+<strong data-i18n="pricing.social.title">Social Visual Kit</strong>
+<b data-i18n="pricing.social.price">From Rp2.5M / $160</b>
+<p data-i18n="pricing.social.copy">Best for brands that need a cleaner, more consistent feed quickly.</p>
+</article>
+<article class="pricing-anchor">
+<strong data-i18n="pricing.launch.title">Launch Pack</strong>
+<b data-i18n="pricing.launch.price">From Rp5.5M / $350</b>
+<p data-i18n="pricing.launch.copy">Best for campaigns, offers, product drops, and new service launches.</p>
+</article>
+<article class="pricing-anchor">
+<strong data-i18n="pricing.ai.title">AI Workflow</strong>
+<b data-i18n="pricing.ai.price">From Rp6.5M / $420</b>
+<p data-i18n="pricing.ai.copy">Best for teams that want repeatable content production with AI support.</p>
 </article>
 </div>
 </div>
@@ -1198,6 +1398,14 @@
 <h2 class="font-headline-xl text-headline-xl mb-8"><span data-i18n="contact.titleA">Let's build something</span> <span class="text-secondary italic" data-i18n="contact.titleB">visionary.</span></h2>
 <p class="text-on-surface-variant font-body-lg text-body-lg mb-16 max-w-xl mx-auto opacity-90" data-i18n="contact.copy">Available for selective creative direction and AI workflow implementation.</p>
 <p class="contact-context font-label-caps text-label-caps tracking-[0.18em] uppercase mb-10 opacity-80" data-i18n="contact.contextDefault" id="contact-context">Choose a service or project card to start with the right context.</p>
+<div class="lead-magnet">
+<div>
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="lead.kicker">Not sure yet?</span>
+<h3 class="font-headline-md text-2xl font-bold mt-2" data-i18n="lead.title">Send the messy idea first.</h3>
+<p class="mt-2" data-i18n="lead.copy">No need for a perfect brief. Share the rough goal, I'll help turn it into a clear scope, timeline, and estimate.</p>
+</div>
+<a class="card-cta mt-0" href="#project-brief" id="lead-brief-link"><span data-i18n="lead.cta">Get project estimate</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
 <div class="social-preview-grid text-left">
 <a class="social-preview-card" data-social-link="email" href="mailto:dimaseb1998@gmail.com">
 <span>
@@ -1400,7 +1608,7 @@
             "hero.kicker": "Founder Kreatif Berbasis AI",
             "hero.copy": "Biar brand kamu nggak cuma terlihat bagus, tapi juga terasa siap dipercaya. Aku bantu bikin visual, video, motion, dan workflow AI yang membuat konten lebih cepat diproduksi, lebih rapi, dan lebih gampang dijual.",
             "hero.projects": "Lihat Proyek",
-            "hero.contact": "Kontak",
+            "hero.contact": "Estimasi Project",
             "projects.titleA": "Proyek",
             "projects.titleB": "Pilihan",
             "projects.copy": "Contoh pekerjaan yang dirancang bukan cuma untuk dilihat, tapi untuk membuat brand terasa lebih jelas, premium, dan siap diajak kerja.",
@@ -1425,6 +1633,24 @@
             "services.ai.copy": "Workflow AI yang memang kepakai, untuk mempercepat produksi, merapikan proses, dan menjaga kualitas tetap manusiawi.",
             "services.strategy.title": "Strategi Konten",
             "services.strategy.copy": "Rencana konten yang tidak cuma ramai ide, tapi punya angle, prioritas, dan jalur menuju conversion.",
+            "path.look.title": "Lihat karya",
+            "path.look.copy": "Pilih project atau layanan yang paling dekat dengan tujuan kamu.",
+            "path.pick.title": "Pilih arah",
+            "path.pick.copy": "Mulai dari paket yang tersedia atau minta scope custom.",
+            "path.brief.title": "Kirim brief",
+            "path.brief.copy": "Bagikan kebutuhan utama dan dapatkan estimasi draft dengan cepat.",
+            "path.start.title": "Mulai produksi",
+            "path.start.copy": "Kunci scope, timeline, pembayaran, lalu kita eksekusi.",
+            "trust.scope.title": "Scope jelas",
+            "trust.scope.copy": "Kamu tahu apa yang dibuat, kapan dikirim, dan kapan pekerjaan dianggap selesai.",
+            "trust.speed.title": "Delivery cepat",
+            "trust.speed.copy": "Proses ramping untuk social kit, launch, dan kebutuhan visual yang urgent.",
+            "trust.revision.title": "Revisi termasuk",
+            "trust.revision.copy": "Revisi terarah menjaga hasil tetap rapi tanpa membuat proses melambat.",
+            "trust.global.title": "Siap global",
+            "trust.global.copy": "Komunikasi remote, delivery digital, dan estimasi multi-currency.",
+            "trust.ai.title": "AI assisted",
+            "trust.ai.copy": "AI mempercepat produksi, sementara judgment kreatif menjaga hasil tetap tajam.",
             "workflow.titleA": "Alur Kerja",
             "workflow.titleB": "Modern",
             "workflow.research.title": "Riset",
@@ -1462,7 +1688,20 @@
             "packages.ai.item1": "Workflow produksi konten berbantuan AI",
             "packages.ai.item2": "Prompt system dan asset pipeline yang bisa dipakai ulang",
             "packages.ai.item3": "Training notes agar tim bisa eksekusi lebih mandiri",
-            "packages.cta": "Mulai paket ini",
+            "packages.cta": "Minta estimasi",
+            "pricing.social.title": "Social Visual Kit",
+            "pricing.social.price": "Mulai Rp2,5Jt / $160",
+            "pricing.social.copy": "Cocok untuk brand yang butuh feed lebih rapi dan konsisten dengan cepat.",
+            "pricing.launch.title": "Launch Pack",
+            "pricing.launch.price": "Mulai Rp5,5Jt / $350",
+            "pricing.launch.copy": "Cocok untuk campaign, offer, product drop, dan launch layanan baru.",
+            "pricing.ai.title": "AI Workflow",
+            "pricing.ai.price": "Mulai Rp6,5Jt / $420",
+            "pricing.ai.copy": "Cocok untuk tim yang ingin produksi konten berulang dengan bantuan AI.",
+            "lead.kicker": "Masih belum yakin?",
+            "lead.title": "Kirim ide mentahnya dulu.",
+            "lead.copy": "Brief tidak harus sempurna. Ceritakan goal kasarnya, nanti aku bantu jadikan scope, timeline, dan estimasi yang jelas.",
+            "lead.cta": "Dapatkan estimasi project",
             "faq.start.q": "Seberapa cepat bisa mulai?",
             "faq.start.a": "Biasanya bisa mulai setelah scope, referensi, timeline, dan DP 50% terkunci. Jadi dari awal ekspektasi jelas.",
             "faq.payment.q": "Pembayarannya bagaimana?",
@@ -1526,7 +1765,7 @@
             "hero.kicker": "AI-Native Creative Founder",
             "hero.copy": "Make your brand look sharp, trusted, and ready to sell. I create visuals, video, motion, and AI-powered workflows that help content move faster, look cleaner, and convert better.",
             "hero.projects": "View Projects",
-            "hero.contact": "Contact",
+            "hero.contact": "Get Estimate",
             "projects.titleA": "Featured",
             "projects.titleB": "Projects",
             "projects.copy": "Selected work built to do more than look good. Each project clarifies the brand, raises trust, and makes the offer easier to understand.",
@@ -1551,6 +1790,24 @@
             "services.ai.copy": "Practical AI workflows that speed up production, clean up the process, and keep the output human.",
             "services.strategy.title": "Content Strategy",
             "services.strategy.copy": "Content plans with angles, priorities, and a path toward conversion, not just a pile of ideas.",
+            "path.look.title": "See the work",
+            "path.look.copy": "Pick a project or service that feels closest to your goal.",
+            "path.pick.title": "Choose a direction",
+            "path.pick.copy": "Start from a package or request a custom scope.",
+            "path.brief.title": "Send the brief",
+            "path.brief.copy": "Share the essentials and get a draft estimate fast.",
+            "path.start.title": "Start production",
+            "path.start.copy": "Lock scope, timeline, payment, then we create.",
+            "trust.scope.title": "Clear scope",
+            "trust.scope.copy": "You know what will be made, when it arrives, and what counts as done.",
+            "trust.speed.title": "Fast delivery",
+            "trust.speed.copy": "Lean process for social kits, launches, and urgent visual needs.",
+            "trust.revision.title": "Revision included",
+            "trust.revision.copy": "Focused revisions keep the result polished without slowing everything down.",
+            "trust.global.title": "Global friendly",
+            "trust.global.copy": "Remote-ready communication, digital delivery, and multi-currency estimates.",
+            "trust.ai.title": "AI assisted",
+            "trust.ai.copy": "AI speeds up production while creative judgment keeps the work sharp.",
             "workflow.titleA": "Modern",
             "workflow.titleB": "Workflow",
             "workflow.research.title": "Research",
@@ -1563,7 +1820,7 @@
             "workflow.ai.copy": "Using AI to speed up variation, polish visuals, and keep production efficient.",
             "contact.titleA": "Let's build something",
             "contact.titleB": "visionary.",
-            "contact.copy": "Have an idea that needs to feel more mature? Send the brief and I’ll help shape it into a clear, executable scope.",
+            "contact.copy": "Have an idea that needs to feel more mature? Send the brief and I'll help shape it into a clear, executable scope.",
             "contact.contextDefault": "Choose a service or project card first, so the conversation starts with the right context.",
             "social.email.copy": "For full briefs, brand partnerships, or project conversations that need detail.",
             "social.instagram.copy": "See the creative process, portfolio drops, and recent visual experiments.",
@@ -1588,7 +1845,20 @@
             "packages.ai.item1": "AI-assisted content production workflow",
             "packages.ai.item2": "Reusable prompt system and asset pipeline",
             "packages.ai.item3": "Training notes so your team can execute with more independence",
-            "packages.cta": "Start this package",
+            "packages.cta": "Get estimate",
+            "pricing.social.title": "Social Visual Kit",
+            "pricing.social.price": "From Rp2.5M / $160",
+            "pricing.social.copy": "Best for brands that need a cleaner, more consistent feed quickly.",
+            "pricing.launch.title": "Launch Pack",
+            "pricing.launch.price": "From Rp5.5M / $350",
+            "pricing.launch.copy": "Best for campaigns, offers, product drops, and new service launches.",
+            "pricing.ai.title": "AI Workflow",
+            "pricing.ai.price": "From Rp6.5M / $420",
+            "pricing.ai.copy": "Best for teams that want repeatable content production with AI support.",
+            "lead.kicker": "Not sure yet?",
+            "lead.title": "Send the messy idea first.",
+            "lead.copy": "No need for a perfect brief. Share the rough goal, I'll help turn it into a clear scope, timeline, and estimate.",
+            "lead.cta": "Get project estimate",
             "faq.start.q": "How fast can we start?",
             "faq.start.a": "Most projects can start once the scope, references, timeline, and 50% down payment are locked. Expectations stay clear from day one.",
             "faq.payment.q": "How does payment work?",
@@ -1599,7 +1869,7 @@
             "faq.international.a": "Yes. We can communicate through WhatsApp or email, use multi-currency draft invoices, and deliver files digitally.",
             "brief.kicker": "Project Brief",
             "brief.title": "Build your project request",
-            "brief.copy": "Start with the essentials. You’ll get an instant draft estimate, then we refine the scope before production begins.",
+            "brief.copy": "Start with the essentials. You'll get an instant draft estimate, then we refine the scope before production begins.",
             "brief.name": "Name",
             "brief.brand": "Brand / Company",
             "brief.type": "Project Type",
@@ -1711,6 +1981,10 @@
 
     openBriefButton?.addEventListener('click', () => {
         setBriefOpen(!projectBriefCard.classList.contains('is-open'));
+    });
+
+    document.getElementById('lead-brief-link')?.addEventListener('click', () => {
+        setBriefOpen(true);
     });
 
     setBriefOpen(window.location.hash === '#project-brief');
