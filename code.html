@@ -699,6 +699,66 @@
             font-size: 14px;
             line-height: 1.5;
         }
+        .package-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        @media (min-width: 1024px) {
+            .package-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        .package-card {
+            padding: 2rem;
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .package-card.featured {
+            border-color: rgba(123, 208, 255, 0.42);
+            background: rgba(123, 208, 255, 0.07);
+        }
+        .package-price {
+            color: #7bd0ff;
+            font-size: 1.65rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        .package-list {
+            display: grid;
+            gap: 0.65rem;
+            margin: 1.25rem 0;
+            color: #c6c6cd;
+            line-height: 1.55;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        @media (min-width: 768px) {
+            .faq-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .faq-item {
+            padding: 1.4rem;
+            border-radius: 1.5rem;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .faq-item h4 {
+            color: #e0e3e5;
+            font-weight: 700;
+            margin-bottom: 0.65rem;
+        }
+        .faq-item p {
+            color: #c6c6cd;
+            line-height: 1.6;
+        }
         @media (max-width: 767px) {
             nav {
                 gap: 0.75rem;
@@ -1039,6 +1099,48 @@
 <span class="card-cta"><span data-i18n="card.askService">Ask Service</span><span class="material-symbols-outlined text-sm">arrow_forward</span></span>
 </a>
 </div>
+<div class="mt-24">
+<div class="text-center">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase" data-i18n="packages.kicker">Fast Offers</span>
+<h3 class="font-headline-xl text-headline-xl mt-5 mb-4" data-i18n="packages.title">Packages built for quick momentum</h3>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-body-lg" data-i18n="packages.copy">Clear scopes for brands that need better content, launch visuals, or AI-assisted creative systems fast.</p>
+</div>
+<div class="package-grid">
+<article class="package-card">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.social.kicker">Starter</span>
+<h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.social.title">7-Day Social Visual Kit</h4>
+<p class="package-price">Rp2.5M+</p>
+<div class="package-list">
+<p data-i18n="packages.social.item1">9 social media visuals</p>
+<p data-i18n="packages.social.item2">Content direction and visual style</p>
+<p data-i18n="packages.social.item3">Caption/content prompt ideas</p>
+</div>
+<a class="card-cta" href="#contact" data-package-contact="7-Day Social Visual Kit"><span data-i18n="packages.cta">Start this package</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</article>
+<article class="package-card featured">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.launch.kicker">Most useful</span>
+<h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.launch.title">Launch Content Pack</h4>
+<p class="package-price">Rp5.5M+</p>
+<div class="package-list">
+<p data-i18n="packages.launch.item1">Campaign concept and visual direction</p>
+<p data-i18n="packages.launch.item2">Static posts, reels cover, and story assets</p>
+<p data-i18n="packages.launch.item3">Project-ready delivery within 7-14 days</p>
+</div>
+<a class="card-cta" href="#contact" data-package-contact="Launch Content Pack"><span data-i18n="packages.cta">Start this package</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</article>
+<article class="package-card">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.18em] uppercase" data-i18n="packages.ai.kicker">Scale</span>
+<h4 class="font-headline-md text-2xl font-bold mt-3" data-i18n="packages.ai.title">AI Creative Workflow Setup</h4>
+<p class="package-price">Rp6.5M+</p>
+<div class="package-list">
+<p data-i18n="packages.ai.item1">AI-assisted content production workflow</p>
+<p data-i18n="packages.ai.item2">Prompt system and asset pipeline</p>
+<p data-i18n="packages.ai.item3">Training notes for repeatable execution</p>
+</div>
+<a class="card-cta" href="#contact" data-package-contact="AI Creative Workflow Setup"><span data-i18n="packages.cta">Start this package</span><span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</article>
+</div>
+</div>
 </section>
 <!-- Workflow Section -->
 <section class="content-panel px-8 md:px-24 py-section-padding" id="workflow">
@@ -1129,6 +1231,24 @@
 </span>
 <span class="material-symbols-outlined">chat</span>
 </a>
+</div>
+<div class="faq-grid">
+<div class="faq-item">
+<h4 data-i18n="faq.start.q">How fast can we start?</h4>
+<p data-i18n="faq.start.a">Most projects can start after scope confirmation, reference collection, and a 50% down payment.</p>
+</div>
+<div class="faq-item">
+<h4 data-i18n="faq.payment.q">How does payment work?</h4>
+<p data-i18n="faq.payment.a">Bank transfer, e-wallet, Wise, and Bitcoin estimates are available. Final payment details are confirmed manually.</p>
+</div>
+<div class="faq-item">
+<h4 data-i18n="faq.revision.q">Are revisions included?</h4>
+<p data-i18n="faq.revision.a">Yes, each package includes focused revision rounds based on the approved scope and direction.</p>
+</div>
+<div class="faq-item">
+<h4 data-i18n="faq.international.q">Can international clients work with you?</h4>
+<p data-i18n="faq.international.a">Yes. Communication can run through WhatsApp or email, and invoices can be estimated in IDR, USD, EUR, SGD, or BTC.</p>
+</div>
 </div>
 <div class="brief-card" id="project-brief">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
@@ -1324,6 +1444,33 @@
             "social.instagram.open": "Buka Feed",
             "social.youtube.copy": "Edit panjang, breakdown, dan catatan creative direction.",
             "social.whatsapp.copy": "Mulai chat project langsung dengan pesan otomatis.",
+            "packages.kicker": "Offer Cepat",
+            "packages.title": "Paket untuk momentum cepat",
+            "packages.copy": "Scope jelas untuk brand yang butuh konten, visual launch, atau sistem kreatif berbasis AI dengan cepat.",
+            "packages.social.kicker": "Starter",
+            "packages.social.title": "7-Day Social Visual Kit",
+            "packages.social.item1": "9 visual media sosial",
+            "packages.social.item2": "Arah konten dan gaya visual",
+            "packages.social.item3": "Ide caption dan prompt konten",
+            "packages.launch.kicker": "Paling berguna",
+            "packages.launch.title": "Launch Content Pack",
+            "packages.launch.item1": "Konsep campaign dan arah visual",
+            "packages.launch.item2": "Static posts, reels cover, dan story assets",
+            "packages.launch.item3": "Delivery siap project dalam 7-14 hari",
+            "packages.ai.kicker": "Scale",
+            "packages.ai.title": "AI Creative Workflow Setup",
+            "packages.ai.item1": "Workflow produksi konten berbantuan AI",
+            "packages.ai.item2": "Prompt system dan asset pipeline",
+            "packages.ai.item3": "Training notes untuk eksekusi berulang",
+            "packages.cta": "Mulai paket ini",
+            "faq.start.q": "Seberapa cepat bisa mulai?",
+            "faq.start.a": "Sebagian besar project bisa mulai setelah scope disetujui, referensi terkumpul, dan DP 50%.",
+            "faq.payment.q": "Pembayarannya bagaimana?",
+            "faq.payment.a": "Bank transfer, e-wallet, Wise, dan estimasi Bitcoin tersedia. Detail pembayaran final dikonfirmasi manual.",
+            "faq.revision.q": "Apakah revisi termasuk?",
+            "faq.revision.a": "Ya, tiap paket mencakup ronde revisi terarah berdasarkan scope dan arah visual yang sudah disetujui.",
+            "faq.international.q": "Bisa untuk client internasional?",
+            "faq.international.a": "Bisa. Komunikasi bisa lewat WhatsApp atau email, dan invoice bisa estimasi IDR, USD, EUR, SGD, atau BTC.",
             "brief.kicker": "Brief Project",
             "brief.title": "Buat request project kamu",
             "brief.copy": "Isi kebutuhan utama dan dapatkan draft invoice instan yang bisa dikirim via WhatsApp atau email.",
@@ -1423,6 +1570,33 @@
             "social.instagram.open": "Open Feed",
             "social.youtube.copy": "Long-form edits, breakdowns, and creative direction notes.",
             "social.whatsapp.copy": "Start a direct project conversation with an auto-filled message.",
+            "packages.kicker": "Fast Offers",
+            "packages.title": "Packages built for quick momentum",
+            "packages.copy": "Clear scopes for brands that need better content, launch visuals, or AI-assisted creative systems fast.",
+            "packages.social.kicker": "Starter",
+            "packages.social.title": "7-Day Social Visual Kit",
+            "packages.social.item1": "9 social media visuals",
+            "packages.social.item2": "Content direction and visual style",
+            "packages.social.item3": "Caption/content prompt ideas",
+            "packages.launch.kicker": "Most useful",
+            "packages.launch.title": "Launch Content Pack",
+            "packages.launch.item1": "Campaign concept and visual direction",
+            "packages.launch.item2": "Static posts, reels cover, and story assets",
+            "packages.launch.item3": "Project-ready delivery within 7-14 days",
+            "packages.ai.kicker": "Scale",
+            "packages.ai.title": "AI Creative Workflow Setup",
+            "packages.ai.item1": "AI-assisted content production workflow",
+            "packages.ai.item2": "Prompt system and asset pipeline",
+            "packages.ai.item3": "Training notes for repeatable execution",
+            "packages.cta": "Start this package",
+            "faq.start.q": "How fast can we start?",
+            "faq.start.a": "Most projects can start after scope confirmation, reference collection, and a 50% down payment.",
+            "faq.payment.q": "How does payment work?",
+            "faq.payment.a": "Bank transfer, e-wallet, Wise, and Bitcoin estimates are available. Final payment details are confirmed manually.",
+            "faq.revision.q": "Are revisions included?",
+            "faq.revision.a": "Yes, each package includes focused revision rounds based on the approved scope and direction.",
+            "faq.international.q": "Can international clients work with you?",
+            "faq.international.a": "Yes. Communication can run through WhatsApp or email, and invoices can be estimated in IDR, USD, EUR, SGD, or BTC.",
             "brief.kicker": "Project Brief",
             "brief.title": "Build your project request",
             "brief.copy": "Fill in the essentials and get an instant draft invoice you can send through WhatsApp or email.",
@@ -1493,6 +1667,23 @@
     document.querySelectorAll('[data-project-contact]').forEach(link => {
         link.addEventListener('click', () => {
             updateContactContext(link.dataset.projectContact, 'project');
+        });
+    });
+
+    document.querySelectorAll('[data-package-contact]').forEach(link => {
+        link.addEventListener('click', () => {
+            const packageName = link.dataset.packageContact;
+            updateContactContext(packageName, 'project');
+            setBriefOpen(true);
+            const projectType = document.getElementById('project-type');
+            if (packageName.includes('AI')) {
+                projectType.value = 'AI Workflow';
+            } else if (packageName.includes('Launch')) {
+                projectType.value = 'Creative Direction';
+            } else {
+                projectType.value = 'Social Media Design';
+            }
+            updateInvoice();
         });
     });
 
